@@ -1,0 +1,101 @@
+/* General Layout */
+.places {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Header Styles */
+.places h1 {
+  width: 100%;
+  font-size: 2em;
+  padding: 20px;
+}
+
+/* Article Styles */
+.places article {
+  width: 300px;
+  padding: 20px;
+  margin: 15px;
+  border: 1px solid #ccc;
+}
+
+/* Header in Article Styles */
+.article_places_header {
+  display: flex;
+  align-items: center;
+}
+
+/* Price Styles */
+.price_by_night {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+/* Information Box Styles */
+.information {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ccc;
+}
+
+/* User Information Styles */
+.user {
+  padding: 10px;
+}
+
+/* Icons Styles */
+.max_guest,
+.number_rooms,
+.number_bathrooms {
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  margin-right: 5px;
+}
+
+/* Amenities and Reviews Styles */
+.places .amenities,
+.places .reviews {
+  margin-top: 20px;
+}
+
+/* Header Styles in Amenities and Reviews Sections */
+.places .amenities h2,
+.places .reviews h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Additional Review Styles */
+.places .reviews h3,
+.places .reviews p {
+  margin-bottom: 10px;
+}
+
+/* Amenities Icons Styles */
+.places .amenities ul li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+/* Individual Amenity Icon Styles */
+.places_amenities_pet_friendly {
+  background-image: url('path/to/pet-friendly-icon.png');
+}
+
+.places_amenities_tv {
+  background-image: url('path/to/tv-icon.png');
+}
+
+.places_amenities_wifi {
+  background-image: url('path/to/wifi-icon.png');
+}

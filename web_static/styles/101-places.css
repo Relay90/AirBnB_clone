@@ -1,0 +1,136 @@
+/* General Layout */
+.places {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: -1;
+}
+
+/* Article Styles */
+.places article {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  padding: 20px;
+  margin: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Header Styles */
+.places h1 {
+  width: 100%;
+  font-size: 2em;
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* Header 2 Styles */
+.places h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  padding: 0 10px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Header in Article Styles */
+.article_places_header {
+  width: 100%;
+  display: flex;
+}
+
+/* Price Styles */
+.price_by_night {
+  min-width: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 50%;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Information Box Styles */
+.information {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ccc;
+}
+
+/* User Information Styles */
+.user {
+  padding: 10px;
+}
+
+.user b {
+  font-weight: bold;
+}
+
+.user p {
+  margin: 5px 0;
+}
+
+/* Icons Styles */
+.max_guest,
+.number_rooms,
+.number_bathrooms {
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  margin-right: 5px;
+}
+
+/* Common Properties for Icons */
+.max_guest,
+.number_rooms,
+.number_bathrooms {
+  /* Add common properties here */
+}
+
+/* Amenities and Reviews Styles */
+.places .amenities,
+.places .reviews {
+  margin-top: 20px;
+}
+
+/* Styling for ul elements inside amenities and reviews sections */
+.places .amenities ul,
+.places .reviews ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Header Styles in Amenities and Reviews Sections */
+.places .amenities h2,
+.places .reviews h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Additional Review Styles */
+.places .reviews h3,
+.places .reviews p {
+  margin-bottom: 10px;
+}
+
+/* Amenities Icons Styles */
+.places .amenities ul li {
+  margin-bottom: 5px;
+}
+
+/* Individual Amenity Icon Styles */
+.places_amenities_pet_friendly {
+  background-image: url('path/to/pet-friendly-icon.png');
+}
+
+.places_amenities_tv {
+  background-image: url('path/to/tv-icon.png');
+}
+
+.places_amenities_wifi {
+  background-image: url('path/to/wifi-icon.png');
+}
