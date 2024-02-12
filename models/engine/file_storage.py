@@ -20,35 +20,30 @@ class FileStorage:
     __file_path = "file.json"
     __objects = {}
 
-    @classmethod
-    def all(cls):
+    def all(self):
         """Return the dictionary __objects."""
-        return cls.__objects
+        return FileStorage.__objects
 
-    @classmethod
-    def new(cls, obj):
+    def new(self, obj):
         """Set in __objects obj with key <obj_class_name>.id"""
-        key = "{}.{}".format(obj.__class__.__name__, obj.id)
-        cls.__objects[key] = obj
+        ocname = obj.__class__.__name__
+        FileStorage.__objects["{}.{}".format(ocname, obj.id)] = obj
 
-    @classmethod
-    def save(cls):
+    def save(self):
         """Serialize __objects to the JSON file __file_path."""
-        objdict = {key: obj.to_dict() for key, obj in cls.__objects.items()}
-        with open(cls.__file_path, "w") as f:
+        odict = FileStorage.__objects
+        objdict = {obj: odict[obj].to_dict() for obj in odict.keys()}
+        with open(FileStorage.__file_path, "w") as f:
             json.dump(objdict, f)
 
-    @classmethod
-    def reload(cls):
+    def reload(self):
         """Deserialize the JSON file __file_path to __objects, if it exists."""
         try:
-            with open(cls.__file_path) as f:
+            with open(FileStorage.__file_path) as f:
                 objdict = json.load(f)
-                for key, value in objdict.items():
-                    cls_name = value["__class__"]
-                    del value["__class__"]
-                    cls.new(getattr(models, cls_name)(**value))
+                for o in objdict.values():
+                    cls_name = o["__class__"]
+                    del o["__class__"]
+                    self.new(eval(cls_name)(**o))
         except FileNotFoundError:
-            return
-        except json.JSONDecodeError:
             return
